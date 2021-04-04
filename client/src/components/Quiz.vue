@@ -66,11 +66,11 @@
                       </v-progress-linear>
                       <h2 style="padding-top: 15px; color: salmon;">Talk to Us</h2>
                     </div>
-                    <h3>80 - 100%</h3>
+                    <h3>80% - 100%</h3>
                     <h3 style="color: teal; padding-bottom:30px;">Aggressive: Equity / Crowdfunding</h3>
-                    <h3>50 - 79%</h3>
-                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Moderate: Crowdfunding / Mutual Funds/Retail Bonds </h3>
-                    <h3>0 - 49%</h3>
+                    <h3>50% - 79%</h3>
+                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Moderate: Crowdfunding / Mutual Funds/ Retail Bonds </h3>
+                    <h3>0% - 49%</h3>
                     <h3 style="color: salmon; padding-bottom:15px;">Talk to Us</h3>
                   </v-col>
                   <v-col>                    

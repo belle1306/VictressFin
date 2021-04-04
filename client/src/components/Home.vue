@@ -44,7 +44,7 @@
           src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner3.png?alt=media&token=59b638e3-c31f-492f-9fd8-d63fe3116ff2"
         },
         {
-          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner2.png?alt=media&token=f2090d27-ee70-4d1e-bace-6e0e861bd9bd"
+          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner5.png?alt=media&token=67e5c06a-a906-4c23-9d3d-114004a4c844"
         },
         {
           src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner4.png?alt=media&token=0b25408d-c0a1-412d-b87f-6a4a3e0660e0"
