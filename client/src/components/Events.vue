@@ -73,7 +73,7 @@
                                         <div class="font-weight-medium">Funds required (MYR): {{
                                             item.totalfunds
                                             }}</div>
-                                        <div>Closing date: {{ getLocaleDate(item.closing, true) }}</div>
+                                        <div>Closing date : {{ getLocaleDate(item.closing, true) }}</div>
                                         <div>Location: {{ item.location | truncate(18, '...') }}</div>
                                     </v-card-text>
                                     <v-divider class="mx-2"></v-divider>
