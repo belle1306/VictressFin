@@ -4,9 +4,8 @@
       <v-row align-self="center">
         <v-col align-self="center">
           <v-card class="mx-auto" max-width="60%" style="background-color: pink;" align="center">
-            <div class="header-quiz">
-              <h1>Gender Lens and Risk Profiler</h1>
-              <h3>Check your awareness level and investment appetite</h3>
+            <div class="header-quiz">  
+              <h2>Check your awareness level and investment appetite</h2>
             </div>
             <div style="padding: 20px;">
               <div class="step-progress" :style="{'width':progress + '%'}"></div>
@@ -30,16 +29,7 @@
               <div class="box-score" v-if="score_show">
                 <v-row>
                   <v-col class="score">
-                    <h2 style="padding-bottom: 30px;">Your score is <span style="color: indigo;">{{score}}/{{questions.length}}</span></h2>
-                    <h3>Your risk appetite:</h3>
-                    <h3>80 - 100%</h3>
-                    <h3 style="color: teal; padding-bottom:30px;">Aggressive: Equity / Crowdfunding</h3>
-                    <h3>50 - 79%</h3>
-                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Moderate: Crowdfunding / Mutual Funds/Retail Bonds </h3>
-                    <h3>0 - 49%</h3>
-                    <h3 style="color: salmon; padding-bottom:15px;">Talk to Us</h3>
-                  </v-col>
-                  <v-col>
+                    <h2 style="padding-bottom: 30px;">Your risk appetite</h2>
                     <div v-if="percentage > 79 && percentage <= 100" style="padding-top: 5px; padding-bottom: 33px;">
                       <v-progress-linear
                         v-model="percentage"
@@ -76,6 +66,14 @@
                       </v-progress-linear>
                       <h2 style="padding-top: 15px; color: salmon;">Talk to Us</h2>
                     </div>
+                    <h3>80% - 100%</h3>
+                    <h3 style="color: teal; padding-bottom:30px;">Aggressive: Equity / Crowdfunding</h3>
+                    <h3>50% - 79%</h3>
+                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Moderate: Crowdfunding / Mutual Funds/ Retail Bonds </h3>
+                    <h3>0% - 49%</h3>
+                    <h3 style="color: salmon; padding-bottom:15px;">Talk to Us</h3>
+                  </v-col>
+                  <v-col>                    
                     <div class="yt-container">
                       <iframe text-align="center" src="https://www.youtube.com/embed/A5QRZCc50HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
                     </div>
@@ -112,51 +110,51 @@ export default {
           propositions:[
             {props:'About 15%',correct:true},
             {props:'More than 20%'},
-            {props:'More than 50%',},
-            {props:'Equal to men',}
+            {props:'More than 50%'},
+            {props:'Equal to men'}
           ]
         },
         {
-          question:"How does algorithm make finance biased?",
+          question:"How do algorithms make finance biased?",
           propositions:[
-            {props:'Boost bank profitability',},
-            {props:'Equal opportunities to all',},
+            {props:'Boost bank profitability'},
+            {props:'Equal opportunities to all'},
             {props:'Marginalise women and certain segments of society',correct:true},
           ]
           
         },
         {
-          question:"What are the avenues (regulated) to financing for women apart from loans and venture capital?",
+          question:"What are the avenues (regulated) to finance women founders apart from loans and venture capital?",
           propositions:[
             {props:'Family and friends'},
             {props:'Bonds',correct:true},
             {props:'Crowdfunding',correct:true},
-            {props:'Stock Market or Equity',correct:true},
+            {props:'Stock market or equity',correct:true},
           ]
           
         },
         {
-          question:"How can we eridicate unbiased finance towards women ?",
+          question:"How can we eridicate unbiased finance towards women?",
           propositions:[
-            {props:'Nothing',},
+            {props:'Nothing'},
             {props:'Provide equitable access to financing via open banking',correct:true},
-            {props:'Regulation',},
-            {props:'Protest',},
+            {props:'Regulation'},
+            {props:'Protest'},
           ]
           
         },
         {
           question:"What is the ultimate impact for funding women founders in society?",
           propositions:[
-            {props:'Boost economy with creation of jobs',},
+            {props:'Boost economy with job creation'},
             {props:'Equitable and inclusive finance for all'},
             {props:'Innovation and creativity'},
-            {props:'ALL THE ABOVE',correct:true},
+            {props:'all the above',correct:true},
           ]
           
         },
         {
-          question:"What are the internationally-benchmarked parameters for a healthy gender lens score card as laid out by SEAF?",
+          question:"What are the internationally-benchmarked parameters for a healthy gender lens scorecard as laid out by SEAF?",
           propositions:[
             {props:'Board representation', correct:true},
             {props:'Pay', correct:true},
@@ -166,11 +164,10 @@ export default {
           
         },
         {
-          question:"Gender Lens investing is not for men?",
+          question:"Gender lens investing is not for men?",
           propositions:[
             {props:'False', correct:true},
-            {props:'True'},
-            
+            {props:'True'},            
           ]
           
         },
@@ -185,7 +182,7 @@ export default {
         },{
           question:"What will be your cut loss position in any investment?",
           propositions:[
-            {props:'No more than 20%',},
+            {props:'No more than 20%'},
             {props:'More than 20%',correct:true },
             {props:'I dont want to lose any of my capital'},
             
@@ -205,14 +202,11 @@ export default {
           question:"What is/are your investment objective(s)?",
           propositions:[
             {props:'To diversify income into instruments with social impact', correct:true},
-            {props:'To have stable returns over the medium to longer term,', correct:true},
-            {props:'For retirement, education and big items purchase,', correct:true},
-            {props:'Any returns that is better than current savings or fixed deposit,'},
-
-          ]
-          
+            {props:'To have stable returns over the medium to longer term', correct:true},
+            {props:'For retirement, education and big items purchase', correct:true},
+            {props:'Any return that is better than current savings or fixed deposit'},
+          ]          
         },
-
       ],
       a:0,
       b:1,
@@ -226,13 +220,7 @@ export default {
       
     }
   },
-  name: 'Quiz',
-  components: {
-    //HelloWorld
-  },
-  computed:{
-      
-  },
+  name: 'Quiz', 
   methods:{
     selectResponse(e){
       this.correct = true;
@@ -292,52 +280,8 @@ v-card {
   display: flex;
 }
 
-/* .container-app {
-  display: flex;
-  width: 80%;
-  height:80%;
-  justify-content: center;
-  background-color: pink;
-} */
-
-/* .container-quiz {
-  display: flex;
-  width: 60%;
-  height: 100%;
-  background-color:pink;
-  text-align: center;
-  flex-flow: column;
-  border: 1px solid #e7eae0;
-  border-radius: 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-} */
-
 .header-quiz {
-  display: inline-flexbox;
-  width: 100%;
-  height: 20%;
-  border-bottom: 1px solid #e7eae0;
-  justify-content: center;
-  align-items: center;
-  background-color: #83d48b;
-  border-radius: 10px 10px 0px 0px;
-  padding: 15px;
-}
-
-/* .container-quiz .box {
-  display: flex;
-  width: 100%;
-  height: 70%;
-  flex-flow: column;
-  margin: auto;
-} */
-
-.box-question {
-  margin-top: 20px;
+  background-color: #E7EAE0;
 }
 
 .box-question p {
@@ -386,10 +330,6 @@ li>div {
 .check {
   color: rgb(74, 219, 74);
 }
-
-/* .close {
-  color: rgb(240, 117, 100);
-} */
 
 .footer-quiz {
   display: flex;
@@ -444,10 +384,6 @@ li.incorrect {
   padding: 20px;
 }
 
-/* .box-score h2 {
-  margin-top: 40px;
-} */
-
 i {
   display: none;
   color: white;
@@ -488,16 +424,7 @@ i {
   background-color: rgb(106, 128, 202);
 }
 
-/* @media screen and (max-width: 900px) {
-  .container-quiz {
-      width: 60%;
-  }
-} */
-
 @media screen and (max-width: 720px) {
-  /* .container-quiz {
-      width: 80%;
-  } */
   .footer-quiz .box-button button {
       width: 100px;
   }

@@ -54,9 +54,7 @@
                                                         <span class="title font-weight-light">Twitter</span>
                                                     </v-card-title>
                                                     <v-card-text class="headline font-weight-bold">
-                                                       <a class="twitter-timeline" href="https://twitter.com/rafaellawai/lists/gender-equality-finance-27714?ref_src=twsrc%5Etfw">A Twitter List by Victress Fin</a> 
-                                                        
-                                                    
+                                                       <a class="twitter-timeline" href="https://twitter.com/rafaellawai/lists/gender-equality-finance-27714?ref_src=twsrc%5Etfw">A Twitter List by Focal</a>                                                       
                                                     </v-card-text>
                                                 </v-card>
                                             </v-flex>

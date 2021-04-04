@@ -72,8 +72,8 @@
             <ValidationProvider v-slot="{ errors }" name="Email" rules="email" autocomplete="off">
                 <v-text-field v-model="currentevent.contactemail" :error-messages="errors" label="Email (optional)"></v-text-field>
             </ValidationProvider>
-            <ValidationProvider v-slot="{ errors }" name="Total Volunteers Needed" rules="required" autocomplete="off">
-                <v-text-field type="number" v-model="currentevent.totalvolunteer" :error-messages="errors"
+            <ValidationProvider v-slot="{ errors }" name="Total Funds Needed" rules="required" autocomplete="off">
+                <v-text-field type="number" v-model="currentevent.totalfunds" :error-messages="errors"
                     label="Total Funds Needed" required></v-text-field>
             </ValidationProvider>
             <ValidationProvider>
@@ -144,7 +144,7 @@
                     contactname: "",
                     contactnum: "",
                     contactemail: "",
-                    totalvolunteer: null,
+                    totalfunds: null,
                     images: ""                    
                 },
                 smodal: false,
@@ -177,7 +177,7 @@
                 this.eventform.contactname = this.currentevent.contactname;
                 this.eventform.contactnum = this.currentevent.contactnum;
                 this.eventform.contactemail = this.currentevent.contactemail;
-                this.eventform.totalvolunteer = this.currentevent.totalvolunteer;
+                this.eventform.totalfunds = this.currentevent.totalfunds;
                 this.eventform.images = this.currentevent.images;
 
 

@@ -8,7 +8,7 @@ import AuthPage from './components/AuthPage.vue';
 import SignOut from './components/SignOut.vue';
 import NotFound from './components/NotFound.vue';
 import store from './store.js';
-import genderLens from './components/genderLens.vue';
+import GenderLens from './components/GenderLens.vue';
 import Equity from './components/Equity.vue';
 import Education from './components/Education.vue';
 // import Equity from '.components/Equity.vue';
@@ -74,19 +74,16 @@ const router = new VueRouter({
         {
             name: "genderLens",
             path: "/genderLens",
-            component: genderLens
-            
+            component: GenderLens
         },
         {
-            name: "Education",
-            path: "/Education",
+            name: "education",
+            path: "/education",
             component: Education
-            
-            
         },
         {
-            name: "Quiz",
-            path: "/Quiz",
+            name: "quiz",
+            path: "/quiz",
             component: Quiz
             
         },
@@ -96,22 +93,9 @@ const router = new VueRouter({
             component: textAnalyzer
             
         },
-        
-        // {
-        //     name: "Equity",
-        //     path: "/Equity",
-        //     component: Equity
-            
-        // },
         {
-            name: "Quiz",
-            path: "/Quiz",
-            component: Quiz
-            
-        },
-        {
-            name: "Equity",
-            path: "/Equity",
+            name: "equity",
+            path: "/equity",
             component: Equity
             
         }

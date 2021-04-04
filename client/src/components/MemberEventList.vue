@@ -115,7 +115,8 @@
                     },
                     { text: "Contact Name", value: "contactname" },
                     { text: "Contact Number", value: "contactnum" },
-                    { text: "Total Volunteer", value: "totalvolunteer", align: "center" },
+                    // { text: "Total Volunteer", value: "totalvolunteer", align: "center" },
+                    { text: "Total Funds (MYR)", value: "totalfunds", align: "center" },
                     { text: "Status", value: "status", align: "center" },
                     { text: "Action", value: "action", align: "center", sortable: "false" },
                     { text: '', value: 'data-table-expand' }

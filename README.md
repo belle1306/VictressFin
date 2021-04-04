@@ -1,5 +1,4 @@
-# VictressFin
-
+# Focal
 <!-- ![Frontend](support/home-page.png) -->
 
 A web application for members to create ........
@@ -67,11 +66,11 @@ URI | HTTP Method | Description
 ### Database Prep
 
 - Access the MySQL interface in your terminal by running `mysql -u root -p`
-- Create a new database called victressfin: `create database victressfin;`
+- Create a new database called focaldb: `create database focaldb;`
 - Create a `.env` file in project directory and add
 
 ```bash
-  DB_NAME=victressfin
+  DB_NAME=focaldb
   DB_PASS=YOURPASSWORD
   JWT_SECRET=YOURSECRET
 ```

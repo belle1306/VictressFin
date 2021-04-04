@@ -38,20 +38,20 @@
       msg: 'Welcome to Focal',
       items: [
         {
-          src: "/assets/quotebanner1.png"
+          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner1.png?alt=media&token=69717b77-a7ff-4d5f-bca5-8ecc2a00c58b"
         },
         {
-          src: "https://firebasestorage.googleapis.com/v0/b/sehati-sejiwa.appspot.com/o/hudson-hintze-vpxeE7s-my4-unsplash.jpg?alt=media&token=ba62b28a-30e5-47e8-9ab8-a461facf33c4"
+          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner3.png?alt=media&token=59b638e3-c31f-492f-9fd8-d63fe3116ff2"
         },
         {
-          src: "https://firebasestorage.googleapis.com/v0/b/sehati-sejiwa.appspot.com/o/michael-fenton-0ZQ8vojHNuc-unsplash.jpg?alt=media&token=597b6edf-49b3-45b6-a589-5e6511b8711b"
+          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner2.png?alt=media&token=f2090d27-ee70-4d1e-bace-6e0e861bd9bd"
         },
         {
-          src: "https://firebasestorage.googleapis.com/v0/b/sehati-sejiwa.appspot.com/o/rene-bernal-large-unsplash.jpg?alt=media&token=d5abca30-db32-4464-aa87-7aada0abe513"
+          src: "https://firebasestorage.googleapis.com/v0/b/sejiwa-focal.appspot.com/o/quote%20banner4.png?alt=media&token=0b25408d-c0a1-412d-b87f-6a4a3e0660e0"
         },
       ],
       quote: ["In 2019, the proportion of women in leadership roles within financial services firms is 21.9 %, which is projected to grow to 31% by 2030—still below parity", "Firms that appoint a woman to the position generate increased profits and share price returns in her first two years than they did under her male predecessor.", "Since the onset of the pandemic, female founders, particularly those of color, report lower capital buffers and a higher likelihood of pausing prior plans to raise capital.","For every dollar of investment raised, female-run startups generated 78 cents in revenue, whereas male-run startups generated only 31 cents."],
-      writer: ["–Deloitte", "– S&P Global Market Intelligence", "– All Raise", "-Boston consulting group"]
+      writer: ["–Deloitte", "– S&P Global Market Intelligence", "– All Raise", "-Boston Consulting Group"]
     }),
   }
 </script>

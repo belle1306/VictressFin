@@ -5,23 +5,18 @@
         <v-col align-self="center">
           <v-card class="mx-auto" max-width="60%" style="background-color: pink;" align="center">
             <div class="header-quiz">
-              <h1>Gender Lens Score Card</h1>
-            </div>
-            <div style="padding: 20px;">
-              <h3 style="padding: 15px;">Assess your business today using SEAF's Parameters</h3>
-
-              <div class="step-progress" :style="{ width: progress + '%' }"></div>
-              <div
-                class="box"
-                v-for="(question, index) in questions.slice(a, b)"
-                :key="index"
-                v-show="quiz"
-              >
-                <div class="box-question">
-                  <h2>Parameter {{ b }}</h2>
-
-                  <p>{{ question.question }}</p>
-                </div>
+              <h2>Assess your business using the SEAF Gender Equality Scorecard</h2>
+            </div>                         
+            <div
+              class="box"
+              v-for="(question, index) in questions.slice(a, b)"
+              :key="index"
+              v-show="quiz"
+            >
+            <div class="box-question">
+                <h2>Parameter {{ b }}</h2>
+                <div class="step-progress" :style="{ width: progress + '%' }"></div>
+                <p>{{ question.question }}</p>            
                 <div class="box-propositions">
                   <ul>
                     <li
@@ -47,15 +42,7 @@
               <div class="box-score" v-if="score_show">
                 <v-row>
                   <v-col class="score">
-                    <h2 style="padding-bottom: 15px;">Your score is <span style="color: indigo;">{{ score }}/{{ questions.length }}</span></h2>
-                    <h3>80 - 100%</h3>
-                    <h3 style="color: teal; padding-bottom:15px;">Role Model!</h3>
-                    <h3>50 - 79%</h3>
-                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Nearly there, try harder. Not sure how? Contact us.</h3>
-                    <h3>0 - 49%</h3>
-                    <h3 style="color: salmon; padding-bottom:15px;">Talk to us. More needed to be done or watch the following video to learn more.</h3>
-                  </v-col>
-                  <v-col>
+                    <h2 style="padding-bottom: 15px;">Your score></h2>
                     <div v-if="percentage > 79 && percentage <= 100" style="padding-top: 5px; padding-bottom: 33px;">
                       <v-progress-linear
                         v-model="percentage"
@@ -92,6 +79,14 @@
                       </v-progress-linear>
                       <h2 style="padding-top: 15px; color: salmon;">Talk to Us</h2>
                     </div>
+                    <h3>80% - 100%</h3>
+                    <h3 style="padding-bottom:15px;">Role model!</h3>
+                    <h3>50% - 79%</h3>
+                    <h3 style="padding-bottom:15px;">Great work, nearly there.</h3>
+                    <h3>0% - 49%</h3>
+                    <h3 style="padding-bottom:15px;">Talk to us.</h3>
+                  </v-col>
+                  <v-col>                    
                     <div class="yt-container">
                       <iframe
                         text-align="center"
@@ -136,27 +131,24 @@
 </template>
 
 <script>
-// import donutChart from './components/donutChart.vue';
-// import DoughnutExample from './components/DoughnutExample.vue';
 
 export default {
+  name: "GenderLens",
   data() {
     return {
       questions: [
-        //(Last Twelve Months Average Compensation for Hourly Workers (Women)
-
         {
           question:
-            "Pay Equity. Formula: Women/men 12month compensation ratio for salaried employees (percent of women’s to men’s)",
+            "Pay Equity: what is women/men 12-months compensation ratio for salaried employees (percentage of women to men)?",
           propositions: [
-            { props: "0 to 60%" },
+            { props: "0% to 60%" },
             { props: "61% to 85%" },
-            { props: "86% to more than 95%", correct: true },
+            { props: "More than 86%", correct: true },
           ],
         },
         {
           question:
-            "Leadership and Governance:Women’s board or/and management representation (percent of members)",
+            "Leadership and Governance: how many women represent the board or/and management (percentage women to members)?",
           propositions: [
             { props: "0% to 10%" },
             { props: "11% to 45%" },
@@ -165,36 +157,35 @@ export default {
         },
         {
           question:
-            "Value Chain: Do you have approach to target women customers with your products and/services",
+            "Value Chain: any approach to target women customers with your products and/or services?",
           propositions: [
+            { props: "Yes", correct: true },
             { props: "No" },
             { props: "Somewhat" },
-            { props: "Yes", correct: true },
           ],
         },
         {
           question:
-            "Benefits&Professional development: Do you have policies or approach to ensure non-discrimination and equal opportunity in  performance review and promotion processes",
+            "Benefits and Professional Development: any policies to ensure non-discrimination and equal opportunity in performance reviews and promotion processes?",
           propositions: [
-            { props: "Nothing" },
+            { props: "Yes", correct: true},
+            { props: "No" },
             { props: "Somewhat" },
-            { props: "Yes", correct: true },
           ],
         },
         {
-          question: "Workforce Participation:Women’s turnover ratio percent of male turnover.",
+          question: "Workforce Participation: what is the turnover ratio (percentage of women to men)?",
           propositions: [
-            { props: "More than 150%" },
-            { props: "106% to 115%" },
             { props: "Less than 105%", correct: true },
+            { props: "106% to 115%" },
+            { props: "More than 150%" },
           ],
         },
         {
           question:
-            "Safety and health:Do you have policies to address sexual harassment and gender-based violence in the workplace ?",
+            "Safety and Health: any policies to address sexual harassment and gender-based violence in the workplace?",
           propositions: [
             { props: "Yes", correct: true },
-
             { props: "No" },
             { props: "Not sure" },
           ],
@@ -210,10 +201,6 @@ export default {
       progress: 0,
       percentage: 0,
     };
-  },
-  name: "GenderLens",
-  components: {
-    //HelloWorld
   },
   computed: {},
   methods: {
@@ -268,35 +255,10 @@ export default {
 };
 </script>
 
-
 <style scoped>
 v-card {
   display: flex;
 }
-
-/* .container-app {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  background-color: pink;
-} */
-
-/* .container-quiz {
-  display: flex;
-  width: 60%;
-  height: 95%;
-  background-color: pink;
-  text-align: center;
-  flex-flow: column;
-  border: 1px solid #e7eae0;
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-} */
 
 .header-quiz {
   display: flex;
@@ -308,14 +270,6 @@ v-card {
   background-color: #e7eae0;
   border-radius: 10px 10px 0px 0px;
 }
-
-/* .container-quiz .box {
-  display: flex;
-  width: 100%;
-  height: 70%;
-  flex-flow: column;
-  margin: auto;
-} */
 
 .box-question {
   margin-top: 20px;
@@ -367,10 +321,6 @@ li > div {
 .check {
   color: rgb(74, 219, 74);
 }
-
-/* .close {
-  color: rgb(240, 117, 100);
-} */
 
 .footer-quiz {
   display: flex;
@@ -424,10 +374,6 @@ li.incorrect {
   flex-flow: column;
   padding: 20px;
 }
-
-/* .box-score h2 {
-  margin-top: 40px;
-} */
 
 i {
   display: none;

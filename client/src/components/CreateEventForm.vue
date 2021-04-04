@@ -105,7 +105,7 @@
                                 </ValidationProvider>
                                 <ValidationProvider v-slot="{ errors }" name="Total Funds Required Needed" rules="required"
                                     autocomplete="off">
-                                    <v-text-field type="number" min="1" v-model="eform.totalvolunteer"
+                                    <v-text-field type="number" min="1" v-model="eform.totalfunds"
                                         :error-messages="errors" label="Total Funds Required(MYR)" placeholder=" "
                                         required></v-text-field><br />
                                 </ValidationProvider>
@@ -196,7 +196,8 @@
                     contactname: "",
                     contactnum: "",
                     contactemail: "",
-                    totalvolunteer: null,
+                    totalvolunteer: 0,
+                    totalfunds: null,
                     location: "",
                     images: "https://firebasestorage.googleapis.com/v0/b/sehati-sejiwa.appspot.com/o/fadi-xd-I4dR572y7l0-unsplash.jpg?alt=media&token=60b13f56-26df-4831-8e14-ea819da84252"
                 },
@@ -227,7 +228,8 @@
                 this.eform.contactname = "";
                 this.eform.contactnum = "";
                 this.eform.contactemail = "";
-                this.eform.totalvolunteer = null;
+                this.eform.totalvolunteer = 0;
+                this.eform.totalfunds = null;
                 this.eform.location = "";
                 this.eform.images = "https://firebasestorage.googleapis.com/v0/b/sehati-sejiwa.appspot.com/o/fadi-xd-I4dR572y7l0-unsplash.jpg?alt=media&token=60b13f56-26df-4831-8e14-ea819da84252";
                 this.checkbox = false;

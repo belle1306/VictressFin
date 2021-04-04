@@ -32,7 +32,7 @@
                 </v-card-title>
                 <v-card-text style="padding-left: 30px; line-height: 1.6;">
                     <h3>
-                    Female entrepreneurs are disadvantaged in traditional funding markets.We attempt to change this status quo by giving alternative access while empowering investors in general with data and education on gender lens investing across asset classes.
+                    Female entrepreneurs are disadvantaged in the traditional funding market. We want to change this status quo by providing alternative access to funds while empowering investors to practice gender lens investing across asset classes.
                     </h3>
                 </v-card-text>
                 <v-data-iterator :items="items" :items-per-page.sync="itemsPerPage" :page="page" :search="search"
@@ -71,7 +71,7 @@
                                     <v-card-text>
                                         <div class="my-3 subtitle-2">By: {{ item.organization }}</div>
                                         <div class="font-weight-medium">Total funds required (MYR): {{
-                                            item.totalvolunteer
+                                            item.totalfunds
                                             }}</div>
                                         <div>Closing date: {{ getLocaleDate(item.closing, true) }}</div>
                                         <div>Location: {{ item.location | truncate(18, '...') }}</div>

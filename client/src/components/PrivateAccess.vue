@@ -1,7 +1,7 @@
 <template>
     <v-card>
         <v-card-title>
-            {{ $store.getters.getUserState.fullname }}, Welcome to VictressFin!
+            {{ $store.getters.getUserState.fullname }}, Welcome to Focal!
         </v-card-title>
 
         <v-row justify="center" class="my-5">

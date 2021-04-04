@@ -1,43 +1,42 @@
 <template>
   <v-app>
-    <v-app-bar app color="grey darken-4" dark>
+    <v-app-bar>
       <v-img
-        alt="Victress Logo"
+        alt="Focal Logo"
         class="shrink mr-2"
         contain
         :src="require('@/assets/favicon.png')"
         transition="scale-transition"
         width="63"
       />
+      <h1>Focal</h1>
       <v-spacer></v-spacer>
       <v-btn text to="/" exact>Home</v-btn>
       <v-btn text to="/#eventsSection">Crowdfunding</v-btn>
-      <!-- //@click="$vuetify.goTo(target, options)" -->
       <v-btn text to="/textAnalyzer">Mutual Funds</v-btn>
-      <v-btn text to="/Equity">Equity</v-btn>
+      <v-btn text to="/equity">Equity</v-btn>
 
       <div class="text-center">
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn dark v-bind="attrs" v-on="on" class="bottom">
-              Gender Lens Tool Kit
+            <v-btn v-bind="attrs" v-on="on" class="bottom" elevation="0">
+              Gender Lens Toolkit
             </v-btn>
           </template>
           <v-list>
             <v-list-item>
-              <v-btn text to="/genderLens">Gender Lens Score test</v-btn>
+              <v-btn text to="/genderLens">Gender Lens Scorecard</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn text to="/Quiz">Investor Profiler</v-btn>
+              <v-btn text to="/quiz">Investor Profiler</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn text to="/Education">Media Analyzer</v-btn>
+              <v-btn text to="/education">Media Analyzer</v-btn>
             </v-list-item>
           </v-list>
         </v-menu>
       </div>
 
-      <!-- <v-btn text to="/donutChart">My Gender Lens Donut Chart</v-btn> -->
       <v-btn v-if="!isAuthenticated" text to="/login">Login</v-btn>
       <v-menu v-if="isAuthenticated" bottom min-width="200px" rounded offset-y>
         <template v-slot:activator="{ on }">
@@ -68,20 +67,7 @@
 
     <v-footer class="default" app>
       <v-col class="text-center" cols="12">
-        <v-icon class="red--text">favorite</v-icon>
-        A Finastra Hackation project
-        <a class="cyan--text" href="http://CodeOp.tech" target="_blank"
-          ><strong>Unbiased Fintech Future</strong></a
-        >
-        <a
-          class="cyan--text"
-          href="https://www.rebound.asia/breakthrough"
-          target="_blank"
-          ><strong></strong>,</a
-        >
-        Kuala Lumpur, Malaysia | by Victress Coders
-        <strong class="red--text"></strong>
-        <strong class="orange--text"></strong>
+        Finastra’s Hack to the Future 3 | by Victress Coders from Malaysia
       </v-col>
     </v-footer>
   </v-app>
@@ -90,16 +76,8 @@
 <script>
 import * as easings from "vuetify/es5/services/goto/easing-patterns";
 import store from "./store.js";
-// import genderLens from './genderLens.vue';
 export default {
   name: "App",
-  //added components??
-  // components: {
-  //   genderLens,
-  //   financialdashboard,
-  //   investCalculator,
-  //   Quiz,
-  // },
   data() {
     return {
       showLogin: false,
@@ -110,7 +88,7 @@ export default {
       easing: "easeInOutCubic",
       easings: Object.keys(easings),
       items: [
-        { title: "Gender Lens Score test" },
+        { title: "Gender Equality Scorecard" },
         { title: "Investor Profiler" },
         { title: "Media Analyzer" },
       ],

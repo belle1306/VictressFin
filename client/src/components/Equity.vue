@@ -47,7 +47,7 @@ export default {
           margin: 33,
           style: {
             fontSize: '22px',
-            color: 'indigo'
+            color: 'black'
           }
         },
         xaxis: {
@@ -61,11 +61,11 @@ export default {
           ],
         },
         colors: [
-          function({ value}) {
+          function({ value }) {
             if (value > 50.0) {
-              return '#FDA4BA'
+              return '#F1B7B9'
             } else {
-              return '#008080'
+              return '#DF8270'
             }
           }
         ],
@@ -82,39 +82,6 @@ export default {
       }
     };
   },
-// "MSCI EM Ex BRIC",
-// "MSCI World No Tobacco, Alcohol, Weapons",
-// "MSCI World",
-// "MSCI World Sharia Compliant",
-// "MSCI WORLD ex EMU NR EUR",
-// "BFGEI:IND Bloomberg Financial Services Gender-Equality Index",
-  //   created() {
-  //     this.getBenchmack();
-  //   },
-  //   methods: {
-  //     async getBenchmark() {
-  //       try {
-  //         const response = await axios.get(
-  //           "../assets/GetAllBenmarkResponse.json"
-  //         );
-  //         this.info = response.data;
-  //         console.log(response.data);
-  //       } catch (err) {
-  //         console.log(err);
-  //       }
-  //     },
-  // getBenchmark() {
-  //   fetch("http://localhost:3000/benchmarks", {})
-  //     .then((response) =>
-  //       // this.info = response.data
-  //       console.log(response, "<<response")
-  //     )
-  //     .catch((err) => {
-  //       console.error("Error", err);
-  //     });
-  //   return this.info;
-  // },
-  //   },
 };
 </script>
 
