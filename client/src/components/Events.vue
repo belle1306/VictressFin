@@ -70,7 +70,7 @@
                                     </v-card-title>
                                     <v-card-text>
                                         <div class="my-3 subtitle-2">By: {{ item.organization }}</div>
-                                        <div class="font-weight-medium">Total funds required (MYR): {{
+                                        <div class="font-weight-medium">Funds required (MYR): {{
                                             item.totalfunds
                                             }}</div>
                                         <div>Closing date: {{ getLocaleDate(item.closing, true) }}</div>

@@ -20,7 +20,7 @@
             <v-icon class="mr-2" small>
                 mdi-calendar
             </v-icon>
-            <span class="caption grey--text font-weight-light">xxx</span>
+            <span class="caption grey--text font-weight-light">*last 7 days of investors application</span>
         </v-card-text>
     </v-card>
 </template>
@@ -47,7 +47,7 @@
                 
                 let shortDate = "";
                 const groupByDate = filterVol.reduce((prevAcc, curr) => {
-                    shortDate = new Date(curr.dateapp).toLocaleString("en-MY").slice(0,2); //(this.getLocaleDate(curr.dateapp)).slice(5,10).replace("-", "/");
+                    shortDate = (this.getLocaleDate(curr.dateapp)).slice(5,10).replace("-", "/");
                     prevAcc[shortDate] = prevAcc[shortDate] + 1 || 1;
                     return prevAcc;
                 }, {});
