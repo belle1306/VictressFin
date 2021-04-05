@@ -4,45 +4,32 @@
       <v-row align-self="center">
         <v-col align-self="center">
           <v-card class="mx-auto" max-width="60%" style="background-color: pink;" align="center">
-            <div class="header-quiz">
-              <h2>Assess your business using the SEAF Gender Equality Scorecard</h2>
-            </div>                         
-            <div
-              class="box"
-              v-for="(question, index) in questions.slice(a, b)"
-              :key="index"
-              v-show="quiz"
-            >
-            <div class="box-question">
-                <h2>Parameter {{ b }}</h2>
-                <div class="step-progress" :style="{ width: progress + '%' }"></div>
-                <p>{{ question.question }}</p>            
+            <div class="header-quiz">  
+              <h2>Check your gender lens score based on SEAF's parameters</h2>
+            </div>
+            <div style="padding: 20px;">
+              <div class="step-progress" :style="{'width':progress + '%'}"></div>
+              <div class="box" v-for="(question,index) in questions.slice(a,b)" :key="index" v-show="quiz">
+                <div class="box-question">
+                  <h2>Question {{b}}/{{questions.length}}</h2>
+                  <p>{{question.question}}</p>
+                </div>
                 <div class="box-propositions">
                   <ul>
-                    <li
-                      v-for="(proposition, index) in question.propositions"
-                      :key="index"
-                      class="li"
-                      @click="selectResponse(proposition, index)"
-                      :class="correct ? check(proposition) : ''"
-                    >
-                      {{ proposition.props }}
-                      <div
-                        class="fas fa-check"
-                        v-if="correct ? proposition.correct : ''"
-                      ></div>
-                      <div
-                        class="fas fa-times"
-                        v-if="correct ? !proposition.correct : ''"
-                      ></div>
-                    </li>
+                    <li v-for="(proposition,index) in question.propositions" :key="index" class="li" @click="selectResponse(proposition,index)" :class=" correct ? check(proposition) : ''">{{proposition.props}} <div class="fas fa-check" v-if="correct ?  proposition.correct: ''"></div><div class="fas fa-times" v-if="correct ?  !proposition.correct: ''"></div></li>
                   </ul>
+                  <!-- <iframe src="https://codesandbox.io/embed/r1r0p8543m?fontsize=14&hidenavigation=1&theme=dark"
+                    style="width:80%; height:300px; border:0; border-radius: 0px; overflow:hidden;"
+                    title="My Profile"
+                    allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                    sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                  ></iframe> -->
                 </div>
               </div>
               <div class="box-score" v-if="score_show">
                 <v-row>
                   <v-col class="score">
-                    <h2 style="padding-bottom: 15px;">Your score></h2>
+                    <h2 style="padding-bottom: 30px;">Your Gender Lens Score</h2>
                     <div v-if="percentage > 79 && percentage <= 100" style="padding-top: 5px; padding-bottom: 33px;">
                       <v-progress-linear
                         v-model="percentage"
@@ -53,7 +40,7 @@
                           <strong>{{ Math.ceil(value) }}%</strong>
                         </template>
                       </v-progress-linear>
-                      <h2 style="padding-top: 15px; color: teal;">Role Model</h2>
+                      <h2 style="padding-top: 15px; color: teal;">Role Model! Well Done!</h2>
                     </div>
                     <div v-if="percentage < 80 && percentage > 49" style="padding-top: 5px; padding-bottom: 33px;">
                       <v-progress-linear
@@ -65,7 +52,7 @@
                           <strong>{{ Math.ceil(value) }}%</strong>
                         </template>
                       </v-progress-linear>
-                      <h2 style="padding-top: 15px; color: rgb(106, 128, 202);">Nearly There</h2>
+                      <h2 style="padding-top: 15px; color: rgb(106, 128, 202);">Almost there!</h2>
                     </div>
                     <div v-else-if="percentage < 50" style="padding-top: 5px; padding-bottom: 33px;">
                       <v-progress-linear
@@ -80,23 +67,15 @@
                       <h2 style="padding-top: 15px; color: salmon;">Talk to Us</h2>
                     </div>
                     <h3>80% - 100%</h3>
-                    <h3 style="padding-bottom:15px;">Role model!</h3>
+                    <h3 style="color: teal; padding-bottom:30px;">Role Model!Keep it up!</h3>
                     <h3>50% - 79%</h3>
-                    <h3 style="padding-bottom:15px;">Great work, nearly there.</h3>
+                    <h3 style="color: rgb(106, 128, 202); padding-bottom:15px;">Almost There!Work harder </h3>
                     <h3>0% - 49%</h3>
-                    <h3 style="padding-bottom:15px;">Talk to us.</h3>
+                    <h3 style="color: salmon; padding-bottom:15px;">Talk to Us</h3>
                   </v-col>
                   <v-col>                    
                     <div class="yt-container">
-                      <iframe
-                        text-align="center"
-                        src="https://www.youtube.com/embed/A5QRZCc50HI"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        class="video"
-                      ></iframe>
+                      <iframe text-align="center" src="https://www.youtube.com/embed/A5QRZCc50HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
                     </div>
                   </v-col>
                 </v-row>
@@ -104,24 +83,12 @@
             </div>
             <div class="footer-quiz">
               <div v-if="progress < 100" class="box-button">
-                <button
-                  @click="skipQuestion()"
-                  :style="next ? 'background-color: rgb(106, 128, 202)' : ''"
-                >
-                  Skip
-                </button>
-                <button
-                  @click="nextQuestion()"
-                  :style="!next ? 'background-color: rgb(106, 128, 202)' : ''"
-                >
-                  Next
-                </button>
+                <button  @click="skipQuestion()" :style="next ? 'background-color: rgb(106, 128, 202)' : ''">Skip</button>
+                <button  @click="nextQuestion()" :style="!next ? 'background-color: rgb(106, 128, 202)' : ''">Next</button>
               </div>
               <div v-if="score_show" class="btn-restart" style="margin-top: 5px;">
-                <button @click="restartQuiz">
-                  Restart <i class="fas fa-sync-alt"></i>
-                </button>
-              </div>
+                <button @click="restartQuiz">Restart <i class="fas fa-sync-alt"></i></button>
+              </div>  
             </div>
           </v-card>
         </v-col>
