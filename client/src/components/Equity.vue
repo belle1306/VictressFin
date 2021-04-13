@@ -13,7 +13,9 @@
             <v-col>
               <p><strong>MSCI-4:</strong> MSCI World Sharia Compliant</p>
               <p><strong>MSCI-5:</strong> MSCI WORLD ex EMU NR EUR</p>
-              <p><strong>BFGEI:</strong> IND Bloomberg Financial Services Gender-Equality Index</p>
+              <p><strong>BFGEI:</strong> Bloomberg Financial Services Gender-Equality Index</p>
+              <a href="https://assets.bbhub.io/company/sites/46/2021/01/GEI2021_MemberList_FNL.pdf" target="_blank">Click here for BFGEI Index List</a>
+              <a><iframe src="https://assets.bbhub.io/company/sites/46/2021/01/GEI2021_MemberList_FNL.pdf" >BFGEI Companies List</iframe> </a>
             </v-col>
           </v-row>
         </v-card-text>
