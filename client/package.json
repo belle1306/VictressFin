@@ -41,7 +41,7 @@
     "apexcharts": "^3.26.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "d3-scale": "^3.2.4",
+    "d3-scale": "^4.0.2",
     "plotly.js-dist": "^1.58.4",
     "vee-validate": "^3.4.5",
     "vue": "^2.6.11",
